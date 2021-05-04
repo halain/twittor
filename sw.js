@@ -3,7 +3,7 @@ importScripts('js/sw-utils.js')
 
 
 //personalizar mis nombres de caches, tantos como dese
-const STATIC_CACHE    = 'static-v2';
+const STATIC_CACHE    = 'static-v3';
 const DYNAMIC_CACHE   = 'dynamic-v1';
 const INMUTABLE_CACHE = 'inmutable-v1';
 
@@ -69,7 +69,7 @@ self.addEventListener('activate', e => {
 });
 
 
-//Estrategias de cache
+//Estrategias de cache with network fallback
 self.addEventListener('fetch', e =>{
 
     const respuesta = caches.match( e.request ).then( res => {

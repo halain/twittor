@@ -11,6 +11,15 @@
     font-size: 16px;
     background-color: #dde1e2; 
     width: 100%;
+    /* android evitar el pull to refresh */
+    overscroll-behavior-y: contain;
+    /* Para IOS  */
+     /* deshabilitar text seleccion */
+    -webkit-user-select: none; 
+    /* deshabilitar el highlighting */
+    -webkit-tap-highlight-color: transparent;
+    /* Disable callouts */
+    -webkit-touch-callout: none;
 }
 
 /* Personalizados */

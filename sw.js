@@ -11,7 +11,7 @@ const INMUTABLE_CACHE = 'inmutable-v1';
 // a almacenar en el static, 
 //que yo puedo modificar
 const APP_SHELL = [
-    '/',
+    //'/',
     'index.html',
     'css/style.css',
     'img/favicon.ico',

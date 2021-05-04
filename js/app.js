@@ -1,8 +1,14 @@
+var url = window.location.href;
+
+var swLocation = '/twittor/sw.js'; //github Pages
 
 //configuracion del SW
 if ( navigator.serviceWorker ) {
     //registrar el SW
-    navigator.serviceWorker.register('/sw.js');
+    if (url.includes('localhost')) {
+        swLocation = '/sw.js';
+    }
+    navigator.serviceWorker.register( swLocation );
 }
 
 
